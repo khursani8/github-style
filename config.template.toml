@@ -29,7 +29,7 @@ pygmentsUseClasses = true
   [params.gitalk]
     clientID = "80ebec365d98429560ea" # Your client ID
     clientSecret = "6e9f1163987ef63525f2b8c112849a65e6631543" # Your client secret
-    repo = "blog" # 您的博客的github地址Repository name，例如：xxxx.github.io
+    repo = "khursani8" # 您的博客的github地址Repository name，例如：xxxx.github.io
     owner = "khursani8" # 您的GitHub ID
     admin = "khursani8" # 您的GitHub ID
     id = "location.pathname" # 文章页面的链接地址就是ID
