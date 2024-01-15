@@ -1,37 +1,37 @@
-baseURL = "https://meik2333.com/"
-languageCode = "zh-cn"
-title = "MeiK's blog"
+baseURL = "https://khursani.xyz/"
+languageCode = "en-us"
+title = "Sani's blog"
 theme = "github-style"
 googleAnalytics = "UA-123456-789"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [params]
-  author = "MeiK"
-  description = "In solitude, where we are least alone."
-  github = "MeiK2333"
-  facebook = "MeiK2333"
-  twitter = "MeiK2333"
-  linkedin = "MeiK2333"
-  instagram = "MeiK2333"
-  tumblr = "MeiK2333"
-  email = "meik2333@gmail.com"
-  url = "https://meik2333.com"
+  author = "Sani"
+  description = "Full-stack developer"
+  github = "khursani8"
+  facebook = "khursani8"
+  twitter = "khursani8"
+  linkedin = "khursani8"
+  instagram = "khursani8"
+  tumblr = "khursani8"
+  email = "khursani8@gmail.com"
+  url = "https://khursani.xyz"
   keywords = "blog, google analytics"
   rss = true
   lastmod = true
   favicon = "/images/github.png"
   avatar = "/images/avatar.png"
-  location = "China"
+  location = "Malaysia"
   userStatusEmoji = "😀"
   enableGitalk = true
     
   [params.gitalk]
-    clientID = "Your client ID" # Your client ID
-    clientSecret = "Your client secret" # Your client secret
-    repo = "LuvSia" # 您的博客的github地址Repository name，例如：xxxx.github.io
-    owner = "ventusoon" # 您的GitHub ID
-    admin = "ventusoon" # 您的GitHub ID
+    clientID = "80ebec365d98429560ea" # Your client ID
+    clientSecret = "6e9f1163987ef63525f2b8c112849a65e6631543" # Your client secret
+    repo = "blog" # 您的博客的github地址Repository name，例如：xxxx.github.io
+    owner = "khursani8" # 您的GitHub ID
+    admin = "khursani8" # 您的GitHub ID
     id = "location.pathname" # 文章页面的链接地址就是ID
     labels = "gitalk" # Github issue labels. If you used to use Gitment, you can change it
     perPage = 15 # Pagination size, with maximum 100.
@@ -41,11 +41,11 @@ pygmentsUseClasses = true
     proxy = "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token" # 可以自行添加反向代理
   [[params.links]]
     title = "Link"
-    href = "https://github.com/meik2333"
+    href = "https://github.com/khursani8"
   [[params.links]]
     title = "Link2"
-    href = "https://meik2333.com"
-    icon = "https://meik2333.com/images/avatar.png"
+    href = "https://khursani.xyz"
+    icon = "https://khursani.xyz/images/avatar.png"
 
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
