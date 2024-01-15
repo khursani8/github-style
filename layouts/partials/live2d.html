@@ -1,0 +1,132 @@
+
+<div id="sani">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="350" class="live2d"></canvas>
+    <div id="waifu-tools">
+        <div id="waifu-home">
+            <i data-feather="home"></i>
+        </div>
+        <div id="waifu-model">
+            <i data-feather="user"></i>
+        </div>
+        <div id="waifu-quote">
+            <i data-feather="message-square"></i>
+        </div>
+        <div id="waifu-snapshot">
+            <i data-feather="camera"></i>
+        </div>
+        <div id="waifu-exit">
+            <i data-feather="x"></i>
+        </div>
+    </div>
+    <div id="waifu-model-tools">
+            <div id="waifu-model-in">
+                <i data-feather="plus"></i>
+            </div>
+            <div id="waifu-model-out">
+                <i data-feather="minus"></i>
+            </div>
+            <div id="waifu-model-music">
+                <i data-feather="music"></i>
+            </div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    var message_Path = '/live2d/'
+    var home_Path = document.location.href
+</script>
+<link rel="stylesheet" href="/live2d/css/live2d.css" />
+<script src="/jquery.min.js"></script>
+<link rel="stylesheet" href="/css/main.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
+<script defer src="/libs.js"></script>
+
+<script>
+    if(!(document.location.href==='http://localhost:1313/')){
+        console.log = ()=>{}
+    }
+    $('.ph3.bg-center.cover').css('height',window.innerHeight-77)
+    var canvasID = 'live2d'
+    var no = [42,10,11,32,33,35,7,8,9]
+    
+    
+    $( document ).ready(function() {
+        Mousetrap.bind('q', function() {
+            showHitokoto()
+        });
+    
+        Mousetrap.bind('m', function() {
+            changeModel()
+        });
+        feather.replace({
+            style:"fill:none"
+        })
+        $('#waifu-home').click(function(){document.location.href='/'})     
+        $('#waifu-model').click(changeModel)
+        $('#waifu-quote').click(showHitokoto)
+        $('#waifu-snapshot').click(()=>{
+            console.log('in progress')
+        })
+        $('#waifu-exit').click(function(){$('#sani').hide()})
+        $('#waifu-model-in').click(function(){live2DHelper.modelScaling(1.1)})
+        $('#waifu-model-out').click(function(){live2DHelper.modelScaling(0.9)})
+        $('#waifu-model-music').click(function(){live2DHelper.playSoundAJAX("assets/sound/1.mp3")})
+        $('#live2d').click(function(){live2DHelper.setRandomExpression()})   
+
+        var live2DHelper = new Live2DHelper({canvas: canvasID});
+        console.log('document ready')
+        var path = "/assets/models/asuna/asuna_37/asuna_37.model.json";
+        live2DHelper.loadModel(path, function(){
+            console.log('load model')
+            live2DHelper.startTurnHead();
+            live2DHelper.modelScaling(0.1)
+            live2DHelper.setRandomExpression()
+            document.getElementById(canvasID).addEventListener("mousemove", followPointer, false);
+        });
+
+        function followPointer(e) {
+            live2DHelper.followPointer(e);
+        }
+        function changeModel(modelNum){
+            //modelNum = modelNum % 3 + 1;
+            modelNum = Math.floor(Math.random()*45) + 1
+            console.log(modelNum);
+            live2DHelper.releaseAllModel();
+            if(no.includes(modelNum)) modelNum = 1        
+            if(modelNum >= 10) {
+                live2DHelper.changeModel("/assets/models/asuna/asuna_"+modelNum+"/asuna_"+modelNum+".model.json", function(){
+                    live2DHelper.startTurnHead();
+                    document.getElementById(canvasID).addEventListener("mousemove", followPointer, false);
+                });
+            } else {
+                live2DHelper.changeModel("/assets/models/asuna/asuna_0"+modelNum+"/asuna_0"+modelNum+".model.json", function(){
+                    live2DHelper.startTurnHead();
+                    document.getElementById(canvasID).addEventListener("mousemove", followPointer, false);
+                });
+            }
+        }
+    });
+</script>
+
+<style>
+    #waifu-tools > * {
+        margin: 5px 0;
+    }
+    #waifu-tools{
+        position: absolute;
+        top:50px;
+        right:30px
+    }
+    span{
+        cursor: pointer;
+        color: #5b6c7d;
+        line-height: 20px;
+        transition: 0.2s;
+    }
+    #waifu-model-tools{
+        position: absolute;
+        top:50px;
+        left:50px
+    }
+</style>

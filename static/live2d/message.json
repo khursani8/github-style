@@ -1,0 +1,82 @@
+{
+    "mouseover": [
+        {
+            "selector": "#fb",
+            "text": ["Want to see Sani Facebook？"]
+        },
+        {
+            "selector": "#tw",
+            "text": ["Sani always tweet about amazing thing ＼(￣▽￣)／"]
+        },
+        {
+            "selector": "#github",
+            "text": ["Are you gonna stalk Sani repository?"]
+        },
+        {
+            "selector": "#insta",
+            "text": ["Picture of Sani adventure..(￣▽￣)ノ"]
+        },
+        {
+            "selector": "#cc",
+            "text": ["Place where Sani start his own adventure as Web Developer (*/ω＼)"]
+        },
+        {
+            "selector": "#linkedin",
+            "text": ["Want to hire Sani? You can take a look at how great Sani is... (╯✧▽✧)╯"]
+        },
+        {
+            "selector": "#kaggle",
+            "text": ["Place where Sani start his own adventure as Data Scientist (*/ω＼)"]
+        },
+        {
+            "selector": "a h2",
+            "text": ["Want to see {text}？"]
+        },
+        {
+            "selector": ".searchbox",
+            "text": ["What are you looking for? Need help? |ω･)ﾉ"]
+        },
+        {
+            "selector": "#sani .live2d",
+            "text": ["Where do you think you put your mouse? (＃＞＜)","Please press M key for change model","Press Q key for quote"]
+        },
+        {
+            "selector": "#waifu-home",
+            "text": ["Going Home?","My place XD"]
+        },
+        {
+            "selector": "#waifu-model",
+            "text": ["Change my outfit?","Bored with my outfit?","I got a lot of outfit that can be change...","Like to dress up?"]
+        },
+        {
+            "selector": "#waifu-quote",
+            "text": ["Want some Anime Quote?","Quote that can motivate people"]
+        },
+        {
+            "selector": "#waifu-snapshot",
+            "text": ["Want to take my picture? (WIP)","WIP"]
+        },
+        {
+            "selector": "#waifu-exit",
+            "text": ["Want to hide me?","Bye Bye~"]
+        },
+        {
+            "selector": "#waifu-model-in",
+            "text": ["Zoom in size"]
+        },
+        {
+            "selector": "#waifu-model-out",
+            "text": ["Zoom out size"]
+        },
+        {
+            "selector": "#waifu-model-music",
+            "text": ["Want me to sing a song?"]
+        }
+    ],
+    "click": [
+        {
+            "selector": "#sani #live2d",
+            "text": ["Don't touch me!! (＞﹏＜)","Hentai (￢_￢;)","If you touch me again, I will call police!!"]
+        }
+    ]
+}

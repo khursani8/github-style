@@ -6,6 +6,11 @@ body {
   margin: 0;
 }
 
+.social{
+  text-align: center;
+  margin-top: 50px
+}
+
 .Header {
   display: flex;
   align-items: center;
